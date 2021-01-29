@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join page</title>
+<link href="resources/css/all.css" rel="stylesheet">
+<link href="resources/css/reset.css" rel="stylesheet">
+<link href="resources/css/join.css" rel="stylesheet">
+
+</head>
+<body>
+	<header class="header">
+		<div><img id="logo" src="resources/image/logo.png"></div>
+	</header>
+
+	<section class="section">
+		<form action="">
+			<div class="join">
+				<span class="join_title">아이디</span>
+				<input type="text" id="userid" name="userid">
+				<span class="valid_info"></span>
+			
+				<span class="join_title">비밀번호</span>
+				<input type="password" id="pw" name="pw" maxlength="17">
+				<span class="valid_info"></span>
+					
+				<span class="join_title">비밀번호 재확인</span>
+				<input type="password" id="repw" name="repw" maxlength="17">
+				<span class="valid_info"></span><br><br>
+				
+				<span class="join_title">이 름</span>
+				<input type="text" id="name" name="name">
+				<span class="valid_info"></span>
+				
+				<span class="join_title">주민번호</span>
+				<input type="text" id="name" name="name">
+				<span class="valid_info"></span>
+				
+				<span class="join_title">이메일</span>
+				<input type="email" id="email" name="email">
+				<span class="valid_info"></span>
+				
+				<span class="join_title">휴대전화</span>
+				<input type="text" id="tell" name="tell" maxlength="11">
+				<span class="valid_info"></span>
+				
+				<button onclick="login()">가입하기</button>
+			</div>
+		</form>		
+		
+		
+		
+	</section>
+</body>
+</html>
