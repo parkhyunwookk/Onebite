@@ -1,0 +1,63 @@
+
+
+/* 공지 조회 화면 */
+.table{
+    display: flex;
+    justify-content: center;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    margin-top: 1vw;
+    min-height: 50vh;
+    width: 70vw;
+}
+th{
+    border: 1px solid gray;
+    height: 7%;
+    width: 20%;
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+.content{
+    border: 1px solid gray;
+    width: 70%;
+    font-size: 1.5vw;
+    padding-left: 1%;
+}
+.content_info{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 27%;
+    font-size: 1vw;
+}
+.content_info li{
+    list-style: none;
+}
+#info{
+    height: 3%;
+}
+.detail{
+    border: 1px solid gray;
+    height: 70%;
+}
+.detach{
+    border: 1px solid gray;
+}
+/* 버튼 */
+button{
+    border-radius: 2px;
+    border: 1px solid gray;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+.button_fa{
+    width: 70vw;
+    margin: 0% 15vw;
+}
+.button_fa>div{
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-0.7vw);
+}
