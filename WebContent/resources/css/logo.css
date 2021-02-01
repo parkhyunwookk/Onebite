@@ -1,0 +1,31 @@
+header{
+    height: 20vh;
+    width:100wv;
+}
+
+.main_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    font-size: 3vw;
+}
+/* 부제목 */
+.sub_logo{
+    height: 40%;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sub_logo ul{
+    display: block;
+    list-style: none;
+}
+.sub_logo li{
+   transform: translateX(-2vw);
+}
+#small_logo{
+  font-size: 1.4vw;
+  transform: translateX(-1.3vw);
+}

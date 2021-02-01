@@ -1,0 +1,111 @@
+.login_etc{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.login_etc ul{
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+    margin-right: 5vw;
+    transform: translateY(1vw);
+}
+/* 상단바(메뉴바) */
+
+nav{
+    transform: translateY(-6vh);
+    background-color: lightgray;
+}
+.nav-item_wrap{
+    width: 80vw;
+    margin-left:10vw;
+}
+.nav-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+.nav-item_list{
+    transform: translateY(0.7vw);
+}
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input:focus {
+    outline:none;
+}
+
+.search-bar button{
+    border: 0.8px solid gray;
+    border-radius: 2px;
+    transform: translateY(1px);
+}
+.nav-item i {
+    font-size: 2.3vw;
+}
+/* 음식사진 */
+section{
+    width: 70vw;
+    padding-left: 15vw;
+    margin-bottom: 10vh;
+}
+.food_page1{
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+.food_img{
+    border: 1px solid gray;
+    min-block-size: 20vw;
+    min-inline-size: 20vw;
+}
+.food_img>img{
+    min-width: 20vw;
+    min-height: 20vw;
+    object-fit: cover;
+}
+.food_info{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.food_info div{
+    border: 1px solid gray;
+    text-align: center;
+    min-block-size: 20vw;       /*나중에 수정*/
+    min-inline-size: 20vw;
+    max-block-size: 20vw;       /*나중에 수정*/
+    max-inline-size: 20vw;
+} 
+.food_info span{
+    padding-bottom: 0.5vw;
+} 
+
+/* 레시피 소개 */
+.food_recipe{
+    margin-left: 15vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    min-block-size: 40vw;       /*나중에 수정*/
+    min-inline-size: 40vw;      /*나중에 수정*/
+    max-block-size: 40vw;       /*나중에 수정*/
+    max-inline-size: 40vw;      /*나중에 수정*/
+}
+/* 리뷰 페이지 */
+.food_review ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food_review li{
+    margin: 5vh 0 ;
+    text-align: center;
+    border: 1px solid gray;
+    min-block-size: 20vw;       /*나중에 수정*/
+    min-inline-size: 20vw;  /*나중에 수정*/
+    max-block-size: 20vw;       /*나중에 지우기*/
+    max-inline-size: 20vw;  /*나중에 지우기*/
+}

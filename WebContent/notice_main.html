@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+<link rel = 'stylesheet' href='resources/css/notice_main.css'/>
+<link rel='stylesheet' href="resources/css/logo.css"/>
+<link rel='stylesheet' href="resources/css/all.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class='main_logo'>
+            SUNDAY CHEF
+        </div>
+    
+        <div>
+            <div class='sub_logo'>
+                <ul>
+                    <li>NOTICE</li>
+                    <li id='small_logo'>공지사항</li>
+                </ul>
+            </div>
+        </header>
+       
+    <form>
+            <div class='search_form'>
+                <span>검색어 입력</span>
+                <select id='search_date'>
+                    <option value ="week">일주일</option>
+                    <option value ="month">한달</option>
+                    <option value ="month3">세달</option>
+                    <option value ="all">전체</option>
+                </select>
+                <select id='search_key'>   
+                    <option value ="subject">제목</option>
+                    <option value ="content">내용</option>
+                    <option value ="writer_name">글쓴이</option>
+                    <option value ="member_id">아이디</option></select>
+                <input placeholder="내용을 입력해주세요">
+                <a href="" onclick="" ><i class="fas fa-search"></i></a>
+          </div>
+    </form>
+    <section>
+<div class="notice_main_list">
+    <table class = "table table-bordered table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th  scope="col" id ='num'>번호</th>
+            <th  scope="col" id ='title'>제목</th>
+            <th  scope="col" id='writer'>작성자</th>
+            <th  scope="col" id ='date'>작성일</th>
+            <th  scope="col" id = 'view'>조회</th>
+        </tr>
+        </thead>    
+
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>공지합니다.</td>
+            <td>test1</td>
+            <td><span>2022-11-22</span></td>
+            <td><span>11</span></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>공지합니다.</td>
+            <td>test1</td>
+            <td><span>2022-11-22</span></td>
+            <td><span>11</span></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>공지합니다.</td>
+            <td>test1</td>
+            <td><span>2022-11-22</span></td>
+            <td><span>11</span></td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>공지합니다.</td>
+            <td>test1</td>
+            <td><span>2022-11-22</span></td>
+            <td><span>11</span></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</section>
+<div class ='page_selector'>
+    <ul class="pagination">
+        <li class = 'active'><a href="#">1</a></li>
+    </ul>
+    <div class='mg_button'>
+    <button>글쓰기</button>
+    <button>삭제</button>
+    </div>
+</div>
+</body>
+</html>
