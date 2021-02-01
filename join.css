@@ -1,0 +1,54 @@
+@charset "UTF-8";
+	body{
+		background-color: #F2F3F4 ;
+	}
+	
+	.header{
+		height: 25vh;
+	}
+	
+	.header #logo{
+		width: 350px;
+		height: 150px;
+		display: block;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.section{
+		min-height: 70vh;
+	}
+	
+	.join{
+		width:450px;
+		margin: 0 auto;
+	}
+	
+	.join{
+		display: flex;
+		flex-direction: column;	
+	}
+	
+	.join>input{
+		padding: 15px 0 15px 0;
+	}
+	
+	.join_title{
+		margin: 10px 0 10px 0;
+	}
+	
+	.join>button{
+		background-color: #33A1FF;
+		padding: 15px 100px 15px 100px;
+		margin: 20px 0 20px 0;
+		color: white;
+		font-size: 1vw;
+	}
+	
+	.passward_lock{
+		position:relative;
+		font-size: 2vw;
+	}
+	
+	

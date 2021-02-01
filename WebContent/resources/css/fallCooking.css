@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.header{
+		height: 12vw;
+	}
+	
+	.section{
+		min-height: 70vw;
+	}
+	
+	/* 제목 */
+	.title{
+		text-align: center;
+		margin: 100px auto;
+		
+	}
+	
+	.title>font{
+		color: #C21E1E;
+		font-size: 3vw;
+		font-weight: bold;
+	}
+	
+	.title>p{
+		font-weight: bold;
+		font-size: 1.5vw;
+		margin: 10px 0 0 0 ;
+	}
+	
+	/* 게시판 내용들 */
+	.board{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.board_box{
+		margin: 50px 0 0 30px;
+	}
+	
+	.board_chiledren{
+		width: 40%;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	
+	.board_box img{
+		width: 100%;
+	}
+	
+	.board_box div>div{
+		background-color: #DF1919;
+		color: white;
+		margin-top: 5px;
+		padding : 10px 10px 10px 10px;
+		width: 20%;
+		text-align: center;
+		
+	}
+	
+	.board_box div>p{
+		margin: 10px 0 0 50px;
+		font-size: 1.5vw;
+		font-weight: bold;
+	}
+	
+	.box_title{
+		display: flex;
+	}
+	
