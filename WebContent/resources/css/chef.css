@@ -1,0 +1,33 @@
+@charset "UTF-8";
+ *{
+	padding:0;
+	margin: 0;
+	border: 1px solid black;
+}
+
+.header-section{
+	width:700px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+header>p{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+header>ul{
+	display: flex;
+}

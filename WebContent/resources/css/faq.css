@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+
+/* header 영역 */
+.header-section{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	position:fixed;
+	width:100%;
+	height:10vh;
+	background-color: white;
+	z-index:999;
+}
+
+.header-section>*{
+	display:flex;
+	align-items:center;
+	width:30%;
+}
+
+.wrap_top-logo{
+	width:15%;
+}
+
+.top-logo-text{
+	font-size:2vw;
+	font-weight:bold;
+	align-self: space-between;
+}
+
+
+.wrap_user{
+	width:15%;
+	justify-content: space-around;
+	font-size:1vw;
+}
+
+
+
+
+/* 검색 */
+
+#center-search{
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	left:50%;
+	top:50%;
+		
+	
+}
+
+.search-form{
+	
+	margin-top: -50px;
+	margin-right: 350px;
+	float: right;
+}
+
+
+
+
+input[type=text]{
+	width: 800px;
+	height: 30px;
+	border-radius: 30px;
+	display: flex;
+	padding: 10px;
+	
+}
+
+button{
+	height:50px;
+	float: right;
+	background: skyblue;
+	color:white;
+	border-radius: 10px;
+	cursor: pointer;
+	position: relative;
+	padding: 7px;
+	font-family: inherit;
+	border: none;
+	font-size: 16px;
+	margin-top: -50px;
+	margin-right: -50px;
+}
+
+.site-main{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-self:center;
+	width:100%;
+	height:25vw;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.tit_site{
+	height:20%;
+	transform:translateY(50%);
+	font-size: 4.5vw;
+	font-weight:bold;
+	text-align: center;
+}
+
+/* faq */
+.box{
+	width: 1000px;
+	margin: 100px auto;
+	border-radius: 7px;
+	box-shadow: 1px 2px 4px;
+	margin-bottom: 500px;
+}
+
+.box .heading{
+	background: skyblue;
+	border-radius: 7px 7px 0px 0px;
+	padding: 30px;
+	text-align: center;
+	font-family: inherit;
+	font-size: 30px;
+}
+
+.faqs{
+	padding:10 100px 200px;
+	font-size: 25px;
+	
+}
+
+.details{
+	padding:100px;
+	border-radius: 7px;
+	margin-top: 20px;
+	font-family: inherit;
+	font-size: 14px;
+	letter-spacing: 50px;
+	
+}
+
+.details summary{
+	outline: none;
+	
+	
+	
+}
+
+
