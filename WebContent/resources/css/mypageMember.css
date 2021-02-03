@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+	body{
+			margin: 0;
+			padding: 0;
+		}
+
+	.header{
+		background-color:orange;
+		border-bottom: 2px solid black;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	 h1{
+	 	
+	 	font-size:30px;
+	 	font-weight:bold;
+		margin-left: 590px;
+		
+	} 
+	
+	.header_nav{
+		display: flex;
+		list-style: none;
+		float: right;
+	}
+	
+	.header_nav li{
+		padding: 8px 12px;
+		padding-left: 20px;
+	}
+	 
+	.member{
+		font-size: 2vw;
+		font-weight: bold;
+		margin-top: 70px;
+		margin-bottom: 70px;
+		text-align: center;
+	}
+	
+	.member_title{
+		font-size:20px;
+		font-weight: bold;
+		text-align: center;
+		margin-right: 490px;
+	}
+	 
+	 .t_member{
+	 	text-align:center;
+	 	width:600px;
+	 	height:300px;
+	 	margin: 0 0 0 480px;
+	 	border: 2px solid black;
+	 }
+	
+	.btn{
+		margin-left:32.5vw;
+		margin-top: 1vh;
+		text-align: center;
+	}
