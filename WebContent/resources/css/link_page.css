@@ -7,7 +7,69 @@ li{
     list-style: none;
     margin: 0 1vw;
 }
-li a{
-    display: flex;
-    justify-content: center;
+
+.sub_logo{
+	display: flex;
+	margin-bottom: 50px;
+	font-size: 1.5vw;
+	justify-content: center;
+}
+.link_img img{
+    width: 20vw;
+    height: 15vw;
+    margin: 0 1vw;
+}
+
+/* 상단 선데이쉐프, 회원가입, 로그인 */
+.header-section{
+	display:flex;
+	justify-content:space-around;
+	width:100%;
+	margin-top: 15px;
+}
+
+.header-section>*{
+	display:flex;
+	align-items:center;
+	width:30%;
+}
+
+.wrap_top-logo{
+	width:15%;
+}
+
+.top-logo-text{
+	font-size:2vw;
+	font-weight:bold;
+	align-self: space-between;
+}
+
+.wrap_user{
+	width:15%;
+	justify-content: space-around;
+	font-size:1vw;
+}
+
+/* 메인 로고 */
+.site-main{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-self:center;
+	width:100%;
+	height:25vw;
+	
+}
+
+.tit_site{
+	font-size: 4.5vw;
+	text-align: center;
+	margin-top : 80px;
+	margin-bottom: 80px;
+}
+
+.tit_site>img{
+	width: 630px; 
+	height:230px;
+	border-radius: 30px;
 }
