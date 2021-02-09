@@ -2,9 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/view/include/head.jsp" %>
 
-<link href="../resources/css/all.css" rel="stylesheet">
-<link href="../resources/css/reset.css" rel="stylesheet">
-<link href="../resources/css/link_page.css" rel="stylesheet">
+<head>
+	<link href="/resources/css/all.css" rel="stylesheet"/>
+	<link href="/resources/css/reset.css" rel="stylesheet"/>
+	<link href="/resources/css/link_page.css" rel="stylesheet"/>
+</head>
 
 <body>
     <header>
@@ -20,7 +22,7 @@
   		 </div>
   		 
   		<p class="tit_site">
-            <img src="../resources/image/Logo.png">
+            <img src="/resources/image/Logo.png">
         </p>
         
            <div class='sub_logo'>
@@ -32,10 +34,10 @@
     </header>
     <section>
         <ul>
-            <li><div class = 'link_img'><a href="steak"><img src="../resources/image/채끝스테이크.png"/></a></div></li>
-            <li><div class = 'link_img'><a href=""><img src="../resources/image/떡볶이.png"/></a></div></li>
-            <li><div class = 'link_img'><a href=""><img src="../resources/image/무슨나베인듯.png"/></a></div></li>
-            <li><div class = 'link_img'><a href=""><img src="../resources/image/전복.png"/></a></div></li>
+            <li><div class = 'link_img'><a href="steak"><img src="/resources/image/채끝스테이크.png"/></a></div></li>
+            <li><div class = 'link_img'><a href=""><img src="/resources/image/떡볶이.png"/></a></div></li>
+            <li><div class = 'link_img'><a href=""><img src="/resources/image/무슨나베인듯.png"/></a></div></li>
+            <li><div class = 'link_img'><a href=""><img src="/resources/image/전복.png"/></a></div></li>
         </ul>
     </section>  
 
