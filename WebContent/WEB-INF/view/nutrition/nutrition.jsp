@@ -7,7 +7,6 @@
 <meta name="referrer" content="no-referrer-when-downgrade" />
 <title>Insert title here</title>
 <link href="../resources/css/nutrition.css" rel="stylesheet">
-<styl
 </head>
 <body>
    <div class="header-section">
