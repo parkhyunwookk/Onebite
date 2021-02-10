@@ -97,6 +97,53 @@
 	text-align: center;
 }
 
+/* 요리검색 */
+.search_box{
+	position: absolute;
+		left: 8%;
+		top: 55%;
+}
+.search_box>label{
+	display: flex;
+	flex-wrap: nowrap;
+}
+#btn_search{
+	border: none;
+	background: gray;
+	color:white;
+	padding:3px 8px;
+}
+
+#btn_search:focus{
+	outline: none;
+}
+#keyword:focus{
+	outline: none;
+}
+
+/* 알레르기 영양성분 표시 */
+
+
+.content{
+	display: flex;
+    width: 30vw;
+    height: 30vw;
+    background-size: cover;
+	
+}
+.wrap{
+	display: block;
+}
+
+.nutri_page{
+	width: 30vw;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+.info_page div{
+	margin-bottom: 0.5vw;
+}
 /* footer */
 .bottom{
 	background-color:orange;
