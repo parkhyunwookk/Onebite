@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+.header{
+	height: 60vh;
+}
+
+.link_img img{
+    width: 20vw;
+    height: 15vw;
+    margin: 0 1vw;
+}
+
+/* 상단 선데이쉐프, 회원가입, 로그인 */
+.header-section{
+	display:flex;
+	justify-content:space-around;
+	width:100%;
+	margin-top: 15px;
+}
+
+.header-section>*{
+	display:flex;
+	align-items:center;
+	width:30%;
+}
+
+.wrap_top-logo{
+	width:15%;
+}
+
+.top-logo-text{
+	font-size:2vw;
+	font-weight:bold;
+	align-self: space-between;
+}
+
+.wrap_user{
+	width:15%;
+	justify-content: space-around;
+	font-size:1vw;
+}
+
+/* 형돈이 로고 */
+.site-main{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-self:center;
+	width:100%;
+	height:25vw;
+	
+}
+
+.tit_site{
+	font-size: 4.5vw;
+	text-align: center;
+	margin-top : 80px;
+	margin-bottom: 80px;
+}
+
+.tit_site>img{
+	width: 630px; 
+	height:230px;
+	border-radius: 30px;
+}
+
+
+
+/*                      section                   */
+.section{
+	min-height: 100vh;
+}
+
+.content{
+	width: 1100px;
+	margin: 0 auto;
+}
+/* 왼쪽 이미지 */
+.content-img>img{
+	width:450px;
+	height:550px;
+	float: left;
+}
+/* 오른쪽 재료 설명서 */
+.content-titl-name{
+	float: right;
+	width: 600px;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "굴림";
+	margin-bottom:30px;
+	padding: 10px 0 29px;
+}
+/* 재료 상세 설명서 */
+.content-semi-title{
+	float: right;
+	width: 600px;
+	height: 400px;
+}
+
+.list{
+	padding: 15px 0;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.list-title{
+	float: left;
+	width: 150px;
+	color:#666;
+	padding: 10px 0;
+}
+
+.list-dec{
+	color:#333;
+	overflow: hidden;
+	padding: 5px 0;
+	line-height: 25px;
+}
+
+.price{
+	color:#333;
+	font-weight: 800;
+	display: flex;
+	justify-content: flex-end;
+	margin: 50px;
+}
+
+.price-title{
+	font-size: 15px;
+	margin: 30px;
+}
+
+.price-dec{
+	font-size: 50px;
+}
+
+/* 장바구니  */
+.cart{
+	float: right;
+	background-color: #5f0080;
+	color: white;
+	font-weight: 800;
+	width: 300px;
+	height: 50px;
+	font-size: 15px;
+}
+

@@ -1,0 +1,128 @@
+.header{
+	height: 60vh;
+}
+
+.link_img img{
+    width: 20vw;
+    height: 15vw;
+    margin: 0 1vw;
+}
+
+/* 상단 선데이쉐프, 회원가입, 로그인 */
+.header-section{
+	display:flex;
+	justify-content:space-around;
+	width:100%;
+	margin-top: 15px;
+}
+
+.header-section>*{
+	display:flex;
+	align-items:center;
+	width:30%;
+}
+
+.wrap_top-logo{
+	width:15%;
+}
+
+.top-logo-text{
+	font-size:2vw;
+	font-weight:bold;
+	align-self: space-between;
+}
+
+.wrap_user{
+	width:15%;
+	justify-content: space-around;
+	font-size:1vw;
+}
+
+/* 형돈이 로고 */
+.site-main{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-self:center;
+	width:100%;
+	height:25vw;
+	
+}
+
+.tit_site{
+	font-size: 4.5vw;
+	text-align: center;
+	margin-top : 80px;
+	margin-bottom: 80px;
+}
+
+.tit_site>img{
+	width: 630px; 
+	height:230px;
+	border-radius: 30px;
+}
+
+/* section */
+.section{
+	min-height: 70vh;
+}
+
+/* 재료 이름 */
+.main_titl{
+	margin-top:50px;
+	text-align: center;
+	font-family:"굴림";
+	font-size: 1.8vw;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+/* 이미지 로고 */
+.logo-steak{
+	text-align: center;
+}
+
+.logo-steak>img{
+	width: 700px;
+	height: 500px;
+}
+
+/* 내 용 */
+.content{
+	display:flex;
+	flex-direction:column;
+	width:700px;
+	margin: 0 auto;
+}
+
+span{
+	margin-top: 10px;
+}
+
+
+#recipe-content1{
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+#recipe-content2{
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+/* 재료 아이템 */
+.recipe-item{
+	display:flex;
+	width: 700px;
+	margin: 50px auto;
+}
+
+li{
+	margin-left: 10px;
+	margin-right: 10px;
+	box-shadow: 3px 3px 2px gray;
+}
