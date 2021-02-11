@@ -16,8 +16,16 @@
 		      </div>
 	      
 		      <div class="wrap_user">
-		         <a class="top_user top_join">회원가입</a>
-		         <a class="top_user">Login</a>
+		        <c:choose>
+      			  <c:when test="${empty sessionScope.userId}">
+	      			<a class="top_user top_join">회원가입</a>
+	         		<a href="/member/login" class="top_user">Login</a>
+      			  </c:when>
+      			  <c:otherwise>
+      				<div class="top_user top_join">${sessionScope.userId.userId}님</div>
+      				<a class="top_user">로그아웃</a>
+      			  </c:otherwise>
+      			</c:choose>
 		      </div>
   		 </div>
   		 

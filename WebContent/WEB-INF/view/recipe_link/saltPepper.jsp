@@ -38,9 +38,9 @@
     <section class="section">
     	<div class="content">
     		<div class="content-img">
-    			<img src="/resources/image/한우.png">
-    			<p class="content-titl-name">1++ 한우 채끝 스테이크 250g(냉장)</p>
-    			<p class="content-titl-name">55,000원</p>
+    			<img src="/resources/image/소금후추.png">
+    			<p class="content-titl-name">소금,후추 그라인더 4종</p>
+    			<p class="content-titl-name">20,000원</p>
     			
     			<div class="content-semi-title">
     				<div class="list">
@@ -49,34 +49,27 @@
     				</div>
     				<div class="list">
     					<dt class="list-title">중량/용량</dt>
-    					<dd class="list-dec">250g</dd>
+    					<dd class="list-dec">옵션별 상이</dd>
     				</div>
     				<div class="list">
     					<dt class="list-title">배송구분</dt>
     					<dd class="list-dec">샛별배송/택배배송</dd>
     				</div>
     				<div class="list">
-    					<dt class="list-title">원산지</dt>
-    					<dd class="list-dec">국내산(한우)</dd>
-    				</div>
-    				<div class="list">
     					<dt class="list-title">포장타입</dt>
     					<dd class="list-dec">냉장/종이포장</dd>
     				</div>
-    				<div class="list">
-    					<dt class="list-title">유통기한</dt>
-    					<dd class="list-dec">포장일로부터 최소 7일 이내 제품을 보내 드립니다.</dd>
-    				</div>
+    			
     				<div class="list">
     					<dt class="list-title">안내사항</dt>
-    					<dd class="list-dec">해당 식품은 냉장 제품이므로, 상품 수령 후 최대한 빠른 시일내에 섭취를 권장드립니다.</dd>
+    					<dd class="list-dec">상단에 위치한 볼트를 이용하여 분쉐정도를 조정할 수 있습니다.</dd>
     				</div>
     				<div>
     					<dt class="list-title">구 매</dt>
     				</div>
     				<div class="price">
     					<dt class="price-title">상품금액 : </dt>
-    					<dd class="price-dec">55,000원</dd>
+    					<dd class="price-dec">20,000원</dd>
     				</div>
     				
     				<button class="cart" onclick="cart()">장바구니 담기</button>
@@ -87,6 +80,6 @@
     	</div>
     </section>
     
-    <script type="text/javascript" src="/resources/js/steak.js"></script>
+    <script type="text/javascript" src="/resources/js/saltPepper.js"></script>
 </body>
 </html>

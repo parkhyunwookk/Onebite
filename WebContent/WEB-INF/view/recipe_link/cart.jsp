@@ -8,8 +8,16 @@
       <h1>썬데이 셰프</h1>
       
       <ul class="header_nav">
-         <li>로그인</li>
-         <li>회원가입</li>
+      	 <c:choose>
+		   <c:when test="${empty sessionScope.userId}">
+		      	<li>로그인</li>
+		        <li>회원가입</li>
+		    </c:when>
+		    <c:otherwise>
+		      <li>${sessionScope.userId.userId}님</li>
+		     </c:otherwise>
+      	 </c:choose>
+         
          <li>공지사항</li>
          <li>마이페이지</li>
       </ul>
@@ -28,7 +36,11 @@
 
    <div class="cart">장바구니</div>
 
-   <div class="cart_content">장바구니가 비어있습니다.</div>
+   <div class="cart_content">
+   		${cartData.cart.userId}님  
+   		내용 : ${cartData.cart.recipe.rcpTitle}
+   		가격 : ${cartData.cart.recipe.rcpPrice}원
+   </div>
 
    <div class="footer">
       <div class="footer_menu">주문/배송 조회</div>
