@@ -1,69 +1,145 @@
 @charset "UTF-8";
 
-	body{
-			margin: 0;
-			padding: 0;
-		}
-
 	.header{
-		background-color:orange;
-		border-bottom: 2px solid black;
-		display: flex;
+		height: 60vh;
+	}
+	
+	.link_img img{
+	    width: 20vw;
+	    height: 15vw;
+	    margin: 0 1vw;
+	}
+	
+	/* 상단 선데이쉐프, 회원가입, 로그인 */
+	.header-section{
+		display:flex;
+		justify-content:space-around;
+		width:100%;
+		margin-top: 15px;
+	}
+	
+	.header-section>*{
+		display:flex;
+		align-items:center;
+		width:30%;
+	}
+	
+	.wrap_top-logo{
+		width:15%;
+	}
+	
+	.top-logo-text{
+		font-size:2vw;
+		font-weight:bold;
+		align-self: space-between;
+	}
+	
+	.wrap_user{
+		width:15%;
 		justify-content: space-around;
-		align-items: center;
+		font-size:1vw;
 	}
-
-	 h1{
-	 	
-	 	font-size:30px;
-	 	font-weight:bold;
-		margin-left: 590px;
+	
+	/* 형돈이 로고 */
+	.site-main{
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		align-self:center;
+		width:100%;
+		height:25vw;
 		
-	} 
-	
-	.header_nav{
-		display: flex;
-		list-style: none;
-		float: right;
 	}
 	
-	.header_nav li{
-		padding: 8px 12px;
-		padding-left: 20px;
+	.tit_site{
+		font-size: 4.5vw;
+		text-align: center;
+		margin-top : 80px;
+		margin-bottom: 80px;
 	}
 	
-	.menu_l{
-		margin-top:100px;
-		margin-left:100px;
-		float: left;
+	.tit_site>img{
+		width: 630px; 
+		height:230px;
+		border-radius: 30px;
 	}
 	
-	.menu_r{
-		margin-top:100px;
-		margin-right:100px;
-		float: right;
+	.section{
+		min-height: 70vh;
+		width: 1000px;
+		margin: 0 auto;
 	}
 	
 	.cart{
-		margin-top: 25vh;
+		padding: 90px 0 90px;
 		text-align: center;
+		font-size:30px;
+	 	font-weight:500;
 	}
 	
-	.cart_content{
-		margin-top:10vh;
-		text-align: center;
+	.cart_all{
+		display:flex;
+		padding-bottom : 10px;
+		border-bottom: 1px solid black;
+		width: 980px;
 	}
 	
-	.footer{
-		margin-top:30vh;
-		width:100vw;
-		border-top:solid thin;
+	.button_clear{
+		margin: 0 10px auto;
+	}
+	
+	.item_tr{
 		display: flex;
+		font-size : 1vw;
+		height: 100px;
+		align-items: center;
+		padding: 5px 0 5px 0;
+		border-bottom: 1px solid #f4f4f4;
 	}
 	
-	.footer_menu{
-		margin-top:20px;
-		justify-content:center;
-		padding-left: 250px;
+	
+	.item_checkbox{
+		width: 100px;
+	}
+	
+	.item_img{
+		width: 150px;
+	}
+	
+	.item_img>img{
+		height: 100px;
+	}
+	
+	.item_name{
+		width: 320px;
+	}
+	
+	#item_count{
+		width: 40px;
+	}
+	
+	.item_price{
+		width: 300px;
+		text-align: center;
+	}
+	
+	.item_buttun>input{
+		background-color: orange;
+		color:white;
+	}
+	
+	.sum_price{
+		margin: 50px auto;
+		font-size: 1.5vw;
+		text-align: right;
+	}
+	
+	.order{
+		background-color: orange;
+		color: white;
+		width: 180px;
+		height: 50px;
+		float: right;
+		
 	}
 	
