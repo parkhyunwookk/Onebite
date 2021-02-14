@@ -22,7 +22,7 @@
 		      		</c:when>
 		      		<c:otherwise>
 		      			<div class="top_user top_join">${sessionScope.userId.userId}님</div>
-		      			<a class="top_user">로그아웃</a>
+		      			<a href="/member/logout" class="top_user">로그아웃</a>
 		      		</c:otherwise>
       			</c:choose>
 		      </div>
@@ -49,19 +49,18 @@
 	   			<tbody class="item_list">
 	   				<c:forEach var="cart" items="${cartList}">
 		   				<tr class="item_tr">
-		   					<td class="item_checkbox"><input type="checkbox" name="checkRow" class='item_recipe'></td>
+		   					<td class="item_checkbox"><input type="checkbox" name="checkRow" value="${cart.itemNumber}" class='item_recipe'></td>
 		   					<td class="item_img"><img src="/resources/image/${cart.recipe.rcpTitle}.png"></td>
 		   					<td class="item_name">${cart.recipe.rcpTitle}</td>
 		   					<td><input id="item_count" type="number" value="${cart.itemCnt}" min="1" max="100"></td>
 		   					<td class="item_price">${cart.recipe.rcpPrice}원</td>
-		   					<td class="item_buttun"><input type="button" name="buttonRow" value="삭제"></td>
-		   					<td></td>
+		   					<td class="item_buttun"><button value="${cart.itemNumber}" onclick="buttonList()">삭제</button></td>
 		   				</tr>
 	   				</c:forEach>
 	   			</tbody>
 	   		</table>
 	   		
-	   		<div class="sum_price">합계금액 : ${cart.recipe.rcpPrice}원</div>
+	   		<div class="sum_price">합계금액 : ${sum}원</div>
 	   		<button class="order">주문하기</button>
 	   		<br><br><br><br><br><br>
 	   		
