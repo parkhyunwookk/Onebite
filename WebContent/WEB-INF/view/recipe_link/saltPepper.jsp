@@ -38,7 +38,7 @@
     <section class="section">
     	<div class="content">
     		<div class="content-img">
-    			<img src="/resources/image/소금후추.png">
+    			<img src="/resources/image/소금후추 그라인더 4종.png">
     			<p class="content-titl-name">소금,후추 그라인더 4종</p>
     			<p class="content-titl-name">20,000원</p>
     			
@@ -80,6 +80,6 @@
     	</div>
     </section>
     
-    <script type="text/javascript" src="/resources/js/saltPepper.js"></script>
+     <script type="text/javascript" src="/resources/js/saltPepper.js"></script>
 </body>
 </html>

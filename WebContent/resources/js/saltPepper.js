@@ -2,9 +2,9 @@ let cart = () => {
 	
 	const url = "recipelink/recipeImpl";
 	
-	let steak = {}
-	steak.itemNumber = "2";
-	steak.itemCnt = 1;
+	let saltPepper = {}
+	saltPepper.itemNumber = "2";
+	saltPepper.itemCnt = 1;
 	
 	let headerObj = new Headers();
 	headerObj.append("content-type","application/x-www-form-urlencoded");
@@ -12,7 +12,7 @@ let cart = () => {
 	fetch(url,{
 		method: "post",
 		headers:headerObj,
-		body:"data=" + JSON.stringify(steak)
+		body:"data=" + JSON.stringify(saltPepper)
 	})
 	.then(response => {
 		if(response.ok){
