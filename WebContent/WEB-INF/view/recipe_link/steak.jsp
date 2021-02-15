@@ -22,7 +22,7 @@
 		      		</c:when>
 		      		<c:otherwise>
 		      			<div class="top_user top_join">${sessionScope.userId.userId}님</div>
-		      			<a class="top_user">로그아웃</a>
+		      			<a href="/member/logout" class="top_user">로그아웃</a>
 		      		</c:otherwise>
       			  </c:choose>
 		      </div>

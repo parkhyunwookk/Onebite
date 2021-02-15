@@ -52,9 +52,12 @@
 		   					<td class="item_checkbox"><input type="checkbox" name="checkRow" value="${cart.itemNumber}" class='item_recipe'></td>
 		   					<td class="item_img"><img src="/resources/image/${cart.recipe.rcpTitle}.png"></td>
 		   					<td class="item_name">${cart.recipe.rcpTitle}</td>
-		   					<td><input id="item_count" type="number" value="${cart.itemCnt}" min="1" max="100"></td>
-		   					<td class="item_price">${cart.recipe.rcpPrice}원</td>
-		   					<td class="item_buttun"><button value="${cart.itemNumber}" onclick="buttonList()">삭제</button></td>
+		   					<td><input id="item_count" type="number" value="${cart.itemCnt}" onclick="countList()" min="1" max="100"></td>
+		   					<td class="item_price">
+		   						<input type="hidden" id="priceValue" value="${cart.recipe.rcpPrice}">
+		   						${cart.recipe.rcpPrice}원
+		   					</td>
+		   					<td class="item_buttun"><button id="itemButton" value="${cart.itemNumber}" onclick="buttonList()">삭제</button></td>
 		   				</tr>
 	   				</c:forEach>
 	   			</tbody>

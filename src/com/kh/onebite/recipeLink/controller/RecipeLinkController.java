@@ -1,19 +1,18 @@
 package com.kh.onebite.recipeLink.controller;
 
 import java.io.IOException;
-import java.sql.Date;
+import java.util.List;
 import java.util.Map;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import com.google.gson.Gson;
 import com.kh.onebite.member.model.vo.Member;
 import com.kh.onebite.recipeLink.model.service.CartService;
+import com.kh.onebite.recipeLink.model.service.RecipeService;
 import com.kh.onebite.recipeLink.model.vo.Cart;
 
 /**
@@ -23,6 +22,8 @@ import com.kh.onebite.recipeLink.model.vo.Cart;
 public class RecipeLinkController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     CartService cartService = new CartService();
+    private RecipeService recipeService = new RecipeService();
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -50,6 +51,10 @@ public class RecipeLinkController extends HttpServlet {
 		case "saltPepper" : saltPepperPage(request, response);
 			break;
 		case "cart" : cartPage(request, response);
+			break;
+		case "cartDelete" : cartDelete(request, response);
+			break;
+		case "cartUpdate" : cartUpdate(request, response);
 			break;
 		
 		
@@ -95,21 +100,23 @@ public class RecipeLinkController extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		Member member = (Member) session.getAttribute("userId");
-		session.setAttribute("data", jsonData);
+		
+		session.setAttribute("userData", jsonData); //userId 정보가 다른곳에서 필요할 경우 사용
 		
 		if(member != null ) {
 			Cart cart = new Cart();
 			String itemNumber = (String) jsonMap.get("itemNumber");
-			double itemCnt = (double) jsonMap.get("itemCnt");
+			double doubleitemCnt = (double) jsonMap.get("itemCnt");
+			int itemCnt = (int) doubleitemCnt;
 			
 			cart.setUserId(member.getUserId());
 			cart.setItemNumber(itemNumber);
 			cart.setItemCnt(itemCnt); 
 			
-			//cartService.insertCart(cart); //장바구니 cart테이블 저장			
+			cartService.insertCart(cart); //장바구니 cart테이블 저장	
 			
-
 			response.getWriter().print("success");
+			
 		}else {
 			response.getWriter().print("fail");
 		}
@@ -119,23 +126,80 @@ public class RecipeLinkController extends HttpServlet {
 	private void cartPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		Member member = (Member) session.getAttribute("userId");
-		
-		//재료테이블에 재료넘버를 가져와서 선택한 재료를 뿌려주기 위한 session
-		String jsonData = (String) session.getAttribute("data");
-		
-		Gson gson = new Gson(); 
-		Map<String,Object> jsonMap = gson.fromJson(jsonData, Map.class);
-		
 		String user = member.getUserId();
-		String itemNumber = (String) jsonMap.get("itemNumber");
+		
 		//장바구니에 글씨를 출력해주는 역할
-		// [update 예정] userId에 저장한 데이터만 출력 하기 위해선 itemNumber는 필요없다
-		// 일단 다른곳에서 먼저 손을 본 후에 작업하자.
-		Map<String,Object> commandMap = cartService.selectCartDetail(user, itemNumber);
-		request.setAttribute("cartData", commandMap);
+		List<Cart> cartList = cartService.selectCartList(user);
+		request.setAttribute("cartList", cartList);
+		
+		//래시피 가격 합계 계산 
+		int price = 0;
+		for (Cart cart : cartList) {
+			price += cart.getRecipe().getRcpPrice();
+			
+		}
+		request.setAttribute("sum", price);
 		
 		request.getRequestDispatcher("/WEB-INF/view/recipe_link/cart.jsp")
 		.forward(request, response);
+	}
+	
+	private void cartDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String jsonData = request.getParameter("data");
+		
+		Gson gsonDelete = new Gson();
+		Map<String, Object> jsonMap = gsonDelete.fromJson(jsonData, Map.class);
+		
+		String itemNumber = (String) jsonMap.get("itemNumber");
+		double doublePrice = (double) jsonMap.get("price");
+		int price = (int) doublePrice;
+		//System.out.println("price : " + stringPrice);
+		//USER가 있을때만 삭제 
+		HttpSession session = request.getSession();
+		Member member = (Member) session.getAttribute("userId"); 
+		session.setAttribute("itemNumber", itemNumber);
+		
+		if(member != null && itemNumber != null) {  
+			//재료 삭제 하면서 가격을 리셋 한다.
+			recipeService.updateRecipePrice(price, itemNumber);
+			//그이후 삭제 한다.
+			cartService.deleteCart(itemNumber);
+			
+			response.getWriter().print("delete");
+		}
+	}
+	
+	private void cartUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String jsonData = request.getParameter("data");
+		
+		Gson gsonUpdate = new Gson();
+		Map<String,Object> jsonMap = gsonUpdate.fromJson(jsonData, Map.class);
+		
+		HttpSession session = request.getSession();
+		Member member = (Member) session.getAttribute("userId");
+		
+		
+		if(member != null ) {
+			
+			// 수량 업데이트 
+			String doublecountUpdate = (String) jsonMap.get("countUpdate");
+			int countUpdate = Integer.parseInt(doublecountUpdate);
+			String userId = member.getUserId();
+			
+			// 수량 * 가격 = 합계 업데이트 
+			double doublesumUpdate = (double) jsonMap.get("sumUpdate");
+			int sumUpdate = (int) doublesumUpdate;
+			
+			String rcpItemNumber = (String) jsonMap.get("itemNumber");
+			
+			cartService.updateCartItemCnt(countUpdate, userId);
+			cartService.updateCartRcpPrice(sumUpdate, rcpItemNumber);
+			
+			response.getWriter().print("success");
+			
+		}else {
+			//response.getWriter().print("fail");
+		}
 	}
 
 }

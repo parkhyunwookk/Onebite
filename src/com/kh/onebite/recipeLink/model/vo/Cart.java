@@ -8,7 +8,7 @@ public class Cart {
 	private String userId;
 	private String itemNumber;
 	private Date itemDate;
-	private double itemCnt;
+	private int itemCnt;
 	private Recipe recipe;
 	
 	public String getcIdx() {
@@ -43,11 +43,11 @@ public class Cart {
 		this.itemDate = itemDate;
 	}
 	
-	public double getItemCnt() {
+	public int getItemCnt() {
 		return itemCnt;
 	}
 	
-	public void setItemCnt(double itemCnt) {
+	public void setItemCnt(int itemCnt) {
 		this.itemCnt = itemCnt;
 	}
 	

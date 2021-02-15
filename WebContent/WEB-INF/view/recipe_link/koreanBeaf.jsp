@@ -24,7 +24,7 @@
 		      		</c:when>
 		      		<c:otherwise>
 		      			<div class="top_user top_join">${sessionScope.userId.userId}님</div>
-		      			<a class="top_user">로그아웃</a>
+		      			<a href="/member/logout" class="top_user">로그아웃</a>
 		      		</c:otherwise>
       			</c:choose>
 		      </div>
@@ -38,7 +38,7 @@
     <section class="section">
     	<div class="content">
     		<div class="content-img">
-    			<img src="/resources/image/한우.png">
+    			<img src="/resources/image/한우 채끝 스테이크 250g.png">
     			<p class="content-titl-name">1++ 한우 채끝 스테이크 250g(냉장)</p>
     			<p class="content-titl-name">55,000원</p>
     			
