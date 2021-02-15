@@ -5,28 +5,8 @@
 			padding: 0;
 		}
 
-	.content{
-		margin-top: 10px;
-		margin-left: 300px;
-	}
-	
 	.content>img{
 		padding-right: 150px;
-	}
-
-	.fiexd1{
-		position: absolute;
-		left: 8%;
-		top: 75%;
-	}
-	
-	.fiexd2{
-		position: absolute;
-		left: 8%;
-		top: 85%;
-	}
-	.info_section{
-		margin-bottom: 10vh;
 	}
 /* 상단 선데이쉐프, 회원가입, 로그인 */
 .header-section{
@@ -70,7 +50,7 @@
 	justify-content:space-around;
 	align-self:center;
 	width:100%;
-	height:25.6vw;
+	min-height:25.6vw;
 	
 }
 
@@ -92,20 +72,30 @@
 .title{
 	font-size:1.5vw;
 	font-weight:bold;
-	margin-bottom:5vw;
+	margin-bottom: 2vw;
 	margin-top: 2vw;
 	text-align: center;
 }
+section{
+	min-height: 60vh;
+}
 
 /* 요리검색 */
-.search_box{
-	position: absolute;
-		left: 8%;
-		top: 55%;
-}
-.search_box>label{
+.wrap_search_box{
 	display: flex;
-	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+.search_box{
+    width: 40vw;
+    min-height: 10vh;
+    margin-left: 18vw;
+    transform: translateY(54%);
+}
+
+.search_box>label{
+	    display: flex;
+    flex-wrap: nowrap;
 }
 #btn_search{
 	border: none;
@@ -126,9 +116,11 @@
 
 .content{
 	display: flex;
-    width: 30vw;
-    height: 30vw;
+    width: 70vw;
+    justify-content: center;
+    min-height: 30vw;
     background-size: cover;
+    margin: 2vw 15vw;
 	
 }
 .wrap{
@@ -144,6 +136,14 @@
 .info_page div{
 	margin-bottom: 0.5vw;
 }
+.info_page p{
+	font-size: 0.8vw;
+	margin-block : 0.5em;
+}
+.info_page h4{
+	margin-block : 0.5em;
+}
+
 /* footer */
 .bottom{
 	background-color:orange;

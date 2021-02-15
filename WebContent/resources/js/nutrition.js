@@ -59,19 +59,19 @@ document.querySelector('#btn_search').addEventListener('click', async () => {
 				nutrCnt8,
 				nutrCnt9
 			];
-			alert(nutriContent);//확잉용
+			//alert(nutriContent);//확인용
 				//비워주기
 			document.querySelector('.info_page').innerHTML = '';
 			document.querySelector('#keyword').value = '';
 			for(let j = 0; j < nutriName.length; j++){
-			document.querySelector('.info_page').innerHTML += nutriName[j] +  nutriContent[j] + '<br><br>';
+			document.querySelector('.info_page').innerHTML += '<p>' + nutriName[j] +  nutriContent[j] + '</p>';
 		}
 			
 			break;
 
 		}
 	}
-			document.querySelector('.info_page').innerHTML +=  '(1회 제공량기준)';
+			document.querySelector('.info_page').innerHTML +=  '<p>(1회 제공량기준)</p>';
 }
 });
 

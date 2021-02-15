@@ -35,13 +35,14 @@
    <div class="title">영양 및 알레르기 성분</div>
    
           <!-- 요리검색 --> 
+  <section>
+  <div class = 'wrap_search_box'>
   <div class='search_box'> 
   <label>
    <input type = 'text' placeholder="요리이름 검색" id = 'keyword'>
 	<button id = 'btn_search'> 검색</button>
 	</label>
    <div class='info_section'> 
-   <div class="fiexd1">
       <select name = 'select_info' id = 'select_info'>
          <option value = "nutri_info" >영양 성분</option>
          <option value = 'allergy_info'>재료 및 알레르기 성분</option>
@@ -55,8 +56,8 @@
 	         <option>재료선택</option>
 	      </select>
 	   </div>  -->
-	</div>
 </div>   
+</div>
       
    <div class="content">
       <img alt="선택된 재료 사진 게시" src="/resources/img/veg.jpg" width="400px" height="400px">
@@ -67,7 +68,7 @@
       </div>
    </div>
  
-
+</section>
 
 <div class="bottom">
    고객센터 1333-1333

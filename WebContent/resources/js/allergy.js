@@ -4,7 +4,7 @@
 
 document.querySelector('#btn_search').addEventListener('click', async () => {
 	let sel = document.querySelector('#select_info>option:checked').value;
-	let regExp = /[\\?.;:|"\*~`!^\-+<>@#$%&'\"n]/gi;//특수문자제거
+	let regExp = /[\\?;:|"\*~`!^\-+<>@#$%&'\"n]/gi;//특수문자제거
 	if (sel =='allergy_info') {
 		//alert(sel);//확인용
 		const API_KEY = "83679b5f006e4ce497f6";
@@ -22,6 +22,7 @@ document.querySelector('#btn_search').addEventListener('click', async () => {
 		document.querySelector('.info_page').innerHTML = '';
 		document.querySelector('#keyword').value = '';
 		
+		document.querySelector('.info_page').innerHTML +=( '<h4>' + keyword + '</h4>' );
 		let ingreArr = [];
 		  for ( let j= 0; j <ingre.length; j++) {
 			ingreArr[j] = ingre[j];
